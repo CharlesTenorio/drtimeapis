@@ -116,9 +116,4 @@ venv.bak/
 .pyup.yml
 .travis.yml
 .venv/
-Pipfile
-Pipfile.lock
-Procfile
-drtimeapis/
-manage.py
 .idea/vcs.xml
