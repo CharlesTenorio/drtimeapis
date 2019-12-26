@@ -107,7 +107,6 @@ venv.bak/
 # postres files for local developemnt
 
 .pgdata
-.flake8
 .idea/.gitignore
 .idea/drtimeapi.iml
 .idea/inspectionProfiles/
