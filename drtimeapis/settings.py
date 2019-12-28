@@ -2,6 +2,7 @@ import os
 #import cloudinary  # cloudinary
 #import cloudinary.uploader  # cloudinary
 import cloudinary.api  # cloudinary
+from decouple import config
 
 cloudinary.config(
     cloud_name="dr-time",
@@ -18,10 +19,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'u7-7)x4(4$gmzkf2@zjykfaa)!m1si33_5atd%yr_g&73e@&jn'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+SECRET_KEY = config('SECRET_KEY')
+
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = ['*']
 

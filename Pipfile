@@ -6,11 +6,11 @@ verify_ssl = true
 [dev-packages]
 pytest = "*"
 flake8 = "*"
-pytest-cov = "*"
 coverage = "*"
 pytest-mock = "*"
 pytest-django = "*"
 codecov = "*"
+pytest-cov = "*"
 
 [packages]
 requests = "*"
@@ -20,6 +20,7 @@ django-filter = "*"
 gunicorn = "*"
 cloudinary = "*"
 pillow = "*"
+python-decouple = "*"
 
 [requires]
 python_version = "3.8"
