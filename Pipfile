@@ -10,6 +10,7 @@ pytest-cov = "*"
 coverage = "*"
 pytest-mock = "*"
 pytest-django = "*"
+codecov = "*"
 
 [packages]
 requests = "*"
