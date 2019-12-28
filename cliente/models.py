@@ -27,6 +27,7 @@ class Cliente(models.Model):
     senha = models.CharField(max_length=150)
     confirma_sms = models.BooleanField(default=False)
     token_fcm = models.CharField(max_length=250, null=True, blank=True)
+    num_verificacao = models.CharField(max_length=20, null=True, blank=True)
 
     class Meta:
         ordering = ('nome',)
@@ -40,7 +41,7 @@ class Cliente(models.Model):
 def pegar_usuario_id(sender, instance, **kwargs):
     if instance.num_verificacao == '':
         instance.num_verificacao = str(gera_codigo_confirmacao(4))
-    usr = User.objects.filter(username=instance.email).first()
+    usr = User.objects.filter(username=instance.cpf).first()
     instance.id_usuario = usr
 
 

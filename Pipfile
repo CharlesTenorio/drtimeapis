@@ -22,4 +22,4 @@ cloudinary = "*"
 pillow = "*"
 
 [requires]
-python_version = "3.8s"
+python_version = "3.8"
