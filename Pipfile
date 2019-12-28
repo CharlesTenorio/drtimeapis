@@ -9,6 +9,7 @@ flake8 = "*"
 pytest-cov = "*"
 coverage = "*"
 pytest-mock = "*"
+pytest-django = "*"
 
 [packages]
 requests = "*"
@@ -16,6 +17,9 @@ django = "*"
 djangorestframework = "*"
 django-filter = "*"
 gunicorn = "*"
+pillo = "*"
+cloudinary = "*"
+pillow = "*"
 
 [requires]
-python_version = "3.8.0"
+python_version = "3.8s"
