@@ -33,7 +33,7 @@ class Clinica(models.Model):
     data_cad = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        ordering = ('nome',)
+        ordering = ('nome', 'email',)
 
     def __str__(self):
         return self.nome
