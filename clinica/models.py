@@ -6,6 +6,8 @@ from django.db.models.signals import pre_save
 from django.dispatch import receiver
 
 User = get_user_model()
+
+
 class Clinica(models.Model):
     id_usuario = models.OneToOneField(User, on_delete=models.PROTECT, blank=True, null=True)
     nome = models.CharField(max_length=80)
