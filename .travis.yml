@@ -8,12 +8,14 @@ python:
 services:
   postgresql
 addons:
-  postgresql: '11'
+  postgresql: '11.5'
 
 env:
   global:
     - PIPENV_VENV_IN_PROJECT=1
     - PIPENV_IGNORE_VIRTUALENVS=1
+
+ports: ['5432:5432']
 
 install:
   - pip install pipenv
