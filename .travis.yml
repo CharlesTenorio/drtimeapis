@@ -14,6 +14,7 @@ env:
   global:
     - PIPENV_VENV_IN_PROJECT=1
     - PIPENV_IGNORE_VIRTUALENVS=1
+    - PGPORT=5433
 
 install:
   - pip install pipenv
