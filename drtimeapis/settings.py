@@ -1,8 +1,11 @@
 import os
 #import cloudinary  # cloudinary
 #import cloudinary.uploader  # cloudinary
+from functools import partial
+
 import cloudinary.api  # cloudinary
 from decouple import config
+import dj_database_url
 
 
 cloudinary.config(
@@ -99,7 +102,9 @@ WSGI_APPLICATION = 'drtimeapis.wsgi.application'
 
 default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 
-DATABASES = {'default': config('DATABASE_URL', default=default_dburl, cast=dburl), }
+parse_database =partial(dj_database_url.parse, conn_max_age=600)
+
+DATABASES = {'default': config('DATABASE_URL', default=default_dburl, cast=parse_database), }
 
 
 # Password validation
