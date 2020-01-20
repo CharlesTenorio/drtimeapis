@@ -25,8 +25,6 @@ install:
   - pipenv sync -d
   - cp contrib/env-sample .env
 
-
-
 script:
   - pipenv run flake8 .
   - pipenv run pytest --cov=drtimeapi
