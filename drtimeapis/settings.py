@@ -4,6 +4,7 @@ import os
 import cloudinary.api  # cloudinary
 from decouple import config
 
+
 cloudinary.config(
     cloud_name="dr-time",
     api_key="318177226937779",
@@ -55,7 +56,7 @@ LEGGACY_APPS = [
     'marcacao',
     'profissional',
     'especialidade',
-    'clinica_profissional'
+    'clinica_profissional',
 ]
 
 INSTALLED_APPS = (
@@ -98,7 +99,7 @@ WSGI_APPLICATION = 'drtimeapis.wsgi.application'
 
 default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 
-DATABASES = { 'default': config('DATABASE_URL', default=default_dburl, cast=dburl), }
+DATABASES = {'default': config('DATABASE_URL', default=default_dburl, cast=dburl), }
 
 
 # Password validation
