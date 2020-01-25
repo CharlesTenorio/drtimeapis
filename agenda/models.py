@@ -11,3 +11,6 @@ class Agendamento(models.Model):
     id_cliente = models.ForeignKey(Cliente, on_delete=models.PROTECT)
     status_agenda = models.CharField(max_length=30, choices=settings.ST_AGENDA_CHOICES)
     data_cadstro = models.DateTimeField(auto_created=True, blank=True, null=True)
+
+    def __str__(self):
+        return self.status_agenda
